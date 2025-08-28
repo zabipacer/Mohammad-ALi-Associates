@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -153,7 +153,7 @@ const WhyChooseUs = () => {
     <div className="bg-black">
       <section 
         ref={sectionRef}
-        className="py-20 relative overflow-hidden"
+        className="py-12 md:py-20 relative overflow-hidden"
         id="why-choose-us"
       >
         {/* Background Pattern */}
@@ -168,28 +168,28 @@ const WhyChooseUs = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <div 
               className={`transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
               <div className="flex items-center justify-center mb-4">
-                <div className="w-12 h-0.5 bg-amber-600 mr-4"></div>
-                <CheckCircle className="h-6 w-6 text-amber-600" />
-                <div className="w-12 h-0.5 bg-amber-600 ml-4"></div>
+                <div className="w-8 md:w-12 h-0.5 bg-amber-600 mr-2 md:mr-4"></div>
+                <CheckCircle className="h-5 w-5 md:h-6 md:w-6 text-amber-600" />
+                <div className="w-8 md:w-12 h-0.5 bg-amber-600 ml-2 md:ml-4"></div>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-2">
                 Why Choose Muhammad Ali Law Associates
               </h2>
-              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto px-4">
                 Your trusted legal partners in Faisalabad - combining Islamic values, professional excellence, and absolute confidentiality
               </p>
             </div>
           </div>
 
           {/* Main Features Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               const colors = getColorClasses(feature.color);
@@ -212,7 +212,7 @@ const WhyChooseUs = () => {
                   style={{ transitionDelay: `${300 + index * 200}ms` }}
                 >
                   {/* Feature Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 sm:h-48 overflow-hidden">
                     <img
                       src={stockImages[index]}
                       alt={feature.title}
@@ -221,45 +221,45 @@ const WhyChooseUs = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                     
                     {/* Icon Overlay */}
-                    <div className="absolute top-4 right-4">
-                      <div className={`p-3 ${colors.iconBg} rounded-xl backdrop-blur-sm transition-colors duration-300`}>
-                        <Icon className={`h-6 w-6 ${colors.icon}`} />
+                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
+                      <div className={`p-2 sm:p-3 ${colors.iconBg} rounded-xl backdrop-blur-sm transition-colors duration-300`}>
+                        <Icon className={`h-5 w-5 sm:h-6 sm:w-6 ${colors.icon}`} />
                       </div>
                     </div>
                     
                     {/* Secondary Icons */}
-                    <div className="absolute bottom-4 left-4 flex space-x-2">
+                    <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 flex space-x-2">
                       {SecondaryIcons.map((SecIcon, i) => (
-                        <div key={i} className="p-2 bg-black/30 backdrop-blur-sm rounded-lg">
-                          <SecIcon className="h-4 w-4 text-white/80" />
+                        <div key={i} className="p-1 sm:p-2 bg-black/30 backdrop-blur-sm rounded-lg">
+                          <SecIcon className="h-3 w-3 sm:h-4 sm:w-4 text-white/80" />
                         </div>
                       ))}
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className="p-8">
+                  <div className="p-5 sm:p-6 md:p-8">
                     {/* Title */}
-                    <h3 className={`text-2xl font-bold text-white mb-2 ${colors.title} transition-colors duration-300`}>
+                    <h3 className={`text-xl sm:text-2xl font-bold text-white mb-2 ${colors.title} transition-colors duration-300`}>
                       {feature.title}
                     </h3>
                     
                     {/* Subtitle */}
-                    <p className={`${colors.accent} font-semibold mb-4`}>
+                    <p className={`${colors.accent} font-semibold text-sm sm:text-base mb-3 sm:mb-4`}>
                       {feature.subtitle}
                     </p>
                     
                     {/* Description */}
-                    <p className="text-gray-300 leading-relaxed mb-6">
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                       {isExpanded ? feature.expandedDescription : feature.description}
                     </p>
                     
                     {/* Highlights */}
-                    <div className="space-y-3 mb-6">
+                    <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                       {(isExpanded ? feature.expandedHighlights : feature.highlights).map((highlight, i) => (
                         <div key={i} className="flex items-center">
-                          <div className={`w-2 h-2 rounded-full ${colors.iconBg} mr-3`}></div>
-                          <span className="text-gray-300 text-sm">{highlight}</span>
+                          <div className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${colors.iconBg} mr-2 sm:mr-3`}></div>
+                          <span className="text-gray-300 text-xs sm:text-sm">{highlight}</span>
                         </div>
                       ))}
                     </div>
@@ -267,7 +267,7 @@ const WhyChooseUs = () => {
                     {/* Learn More Button */}
                     <button
                       onClick={() => toggleCard(index)}
-                      className={`flex items-center ${colors.accent} hover:text-amber-400 font-medium transition-all duration-300 group-hover:translate-x-1`}
+                      className={`flex items-center ${colors.accent} hover:text-amber-400 font-medium text-sm sm:text-base transition-all duration-300 group-hover:translate-x-1`}
                     >
                       {isExpanded ? 'Show Less' : 'Learn More'}
                       {isExpanded ? (
@@ -288,27 +288,27 @@ const WhyChooseUs = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="bg-gradient-to-r from-amber-600/20 to-amber-700/20 backdrop-blur-sm rounded-2xl border border-amber-600/30 p-8">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="bg-gradient-to-r from-amber-600/20 to-amber-700/20 backdrop-blur-sm rounded-2xl border border-amber-600/30 p-6 sm:p-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
                 <div className="group">
-                  <div className="text-3xl font-bold text-amber-600 mb-2">22+</div>
-                  <div className="text-white font-semibold mb-1">Years Experience</div>
-                  <div className="text-gray-400 text-sm">Since 2002</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-600 mb-2">22+</div>
+                  <div className="text-white font-semibold text-sm sm:text-base mb-1">Years Experience</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">Since 2002</div>
                 </div>
                 <div className="group">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-                  <div className="text-white font-semibold mb-1">Banking Clients</div>
-                  <div className="text-gray-400 text-sm">Major Financial Institutions</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">15+</div>
+                  <div className="text-white font-semibold text-sm sm:text-base mb-1">Banking Clients</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">Major Financial Institutions</div>
                 </div>
                 <div className="group">
-                  <div className="text-3xl font-bold text-green-600 mb-2">24/7</div>
-                  <div className="text-white font-semibold mb-1">Legal Support</div>
-                  <div className="text-gray-400 text-sm">Always Available</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">24/7</div>
+                  <div className="text-white font-semibold text-sm sm:text-base mb-1">Legal Support</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">Always Available</div>
                 </div>
                 <div className="group">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
-                  <div className="text-white font-semibold mb-1">Confidential</div>
-                  <div className="text-gray-400 text-sm">Islamic Ethics</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-2">100%</div>
+                  <div className="text-white font-semibold text-sm sm:text-base mb-1">Confidential</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">Islamic Ethics</div>
                 </div>
               </div>
             </div>
@@ -316,37 +316,37 @@ const WhyChooseUs = () => {
 
           {/* Call to Action */}
           <div 
-            className={`text-center mt-16 transition-all duration-1000 delay-1200 ${
+            className={`text-center mt-12 md:mt-16 transition-all duration-1000 delay-1200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm rounded-2xl border border-amber-600/30 p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">
+            <div className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm rounded-2xl border border-amber-600/30 p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                 Ready to Experience Professional Legal Excellence?
               </h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-300 text-sm sm:text-base mb-6 max-w-2xl mx-auto">
                 Join our prestigious clients including State Bank of Pakistan, National Bank, and major corporations. 
                 Get expert legal advice rooted in Islamic values with complete confidentiality.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <button
                   onClick={() => window.open('mailto:faysalghazi@outlook.com', '_blank')}
-                  className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center"
+                  className="px-6 py-3 sm:px-8 sm:py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center text-sm sm:text-base"
                 >
-                  <Video className="h-5 w-5 mr-2" />
+                  <Video className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                   Schedule Consultation
                 </button>
                 <button
                   onClick={() => window.open('tel:+923216677291', '_self')}
-                  className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center"
+                  className="px-6 py-3 sm:px-8 sm:py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center text-sm sm:text-base"
                 >
-                  <Phone className="h-5 w-5 mr-2" />
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                   Call: 0321-6677291
                 </button>
               </div>
               
               {/* Contact Info */}
-              <div className="mt-6 text-gray-400 text-sm">
+              <div className="mt-6 text-gray-400 text-xs sm:text-sm">
                 <p>Court Office: District Courts, Faisalabad | Evening Office: Tech Town, Satyana Road</p>
                 <p>Email: faysalghazi@outlook.com | Phone: 041-2642291</p>
               </div>
