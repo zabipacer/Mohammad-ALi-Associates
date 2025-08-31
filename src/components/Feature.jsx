@@ -202,7 +202,7 @@ With a strong ethical foundation, the firm is equipped with a competent, honest,
                   <div className="relative group">
                     <div className="w-32 h-32 md:w-48 md:h-48 mx-auto lg:w-full lg:h-64 rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-amber-600/30 transition-all duration-500">
                       <img
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop"
+                        src="ali1.jpg"
                         alt="Ch. Muhammad Faysal Ghazi - Advocate High Court"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />

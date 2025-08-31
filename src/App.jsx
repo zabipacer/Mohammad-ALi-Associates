@@ -15,6 +15,8 @@ import AboutSection from './components/Why'
 import AboutDoctor from './components/AboutDoctor'
 import HassanGallery from './components/HassanGallery'
 import BeforeAfterGallery from './components/BeforeAfter'
+import ClientShowcase from './components/Myclients'
+import FaisalabadLocations from './components/Clockower'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,9 +24,10 @@ function App() {
   return (
     <>
 <HeroSection/>
+<ClientShowcase/>
 
 <FeaturedServices/>
-
+<FaisalabadLocations/>
 <AboutSection/>
 
 <WhyChooseUs/>

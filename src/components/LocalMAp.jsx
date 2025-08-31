@@ -6,7 +6,8 @@ const LOCAL_INFO = {
   name: 'Muhammad Ali Law Associates / Lawyer Firm Faisalabad',
   subtitle: 'Led by Ch. Muhammad Faysal Ghazi Advocate High Court',
   address: 'Chamber No. 49/50, Sufi Barkat Ali Law Building Basement, District Courts, Faisalabad, 38000',
-  phones: ['0321 6677291'],
+  phones: ['0321 6677291','041-2642291', '041-8712291'],
+
   hours: 'Open 24 hours',
   rating: 5.0,
   reviewCount: 16,

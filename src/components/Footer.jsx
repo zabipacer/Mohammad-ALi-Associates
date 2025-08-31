@@ -47,7 +47,7 @@ export default function Footer() {
               href="mailto:faysalghazi@outlook.com"
               className="hover:underline"
             >
-          faysalghazi@outlook.com
+              faysalghazi@outlook.com
             </a>
           </p>
         </motion.div>
@@ -56,10 +56,12 @@ export default function Footer() {
         <motion.nav {...columns} aria-label="Quick Links">
           <h4 className="text-lg font-bold mb-4">Quick Links</h4>
           <ul className="text-sm space-y-2">
-            <li><a href="#hero" className="hover:text-gray-300">Home</a></li>
-            <li><a href="#about" className="hover:text-gray-300">About Us</a></li>
-            <li><a href="#services" className="hover:text-gray-300">Practice Areas</a></li>
-            <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
+            <li><a href="https://dsjfaisalabad.gov.pk" className="hover:text-gray-300">District and Session Judge Faisalabad</a></li>
+            <li><a href="https://fda.gov.pk" className="hover:text-gray-300">FDA Faisalabad</a></li>
+            <li><a href="https://rpofsd.punjabpolice.gov.pk" className="hover:text-gray-300">Faisalabad Police</a></li>
+            <li><a href="https://fcci.com.pk" className="hover:text-gray-300">Faisalabad Chamber of Commerce</a></li>
+            <li><a href="https://web.uaf.edu.pk" className="hover:text-gray-300">University of Agriculture Faisalabad</a></li>
+            <li><a href="https://gcuf.edu.pk" className="hover:text-gray-300">Government College University Faisalabad</a></li>
           </ul>
         </motion.nav>
 
