@@ -1,31 +1,150 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaUniversity, FaBuilding, FaMobile, FaShoppingCart, FaIndustry, FaTruck, FaShieldAlt, FaStar, FaGlobe, FaCrown } from 'react-icons/fa';
+import { FaUniversity, FaBuilding, FaMobile, FaShoppingCart, FaIndustry, FaTruck, FaShieldAlt, FaStar, FaGlobe, FaCrown, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ClientShowcase = () => {
   const [activeSection, setActiveSection] = useState('banking');
 
   const bankingClients = [
-    { name: "State Bank of Pakistan", icon: FaUniversity, type: "Central Bank", tier: "premium", color: "from-yellow-400 to-orange-500" },
-    { name: "National Bank of Pakistan", icon: FaUniversity, type: "Commercial Bank", tier: "premium", color: "from-green-400 to-blue-500" },
-    { name: "Summit Bank Limited", icon: FaUniversity, type: "Commercial Bank", tier: "standard", color: "from-purple-400 to-pink-500" },
-    { name: "Meezan Bank Limited", icon: FaShieldAlt, type: "Islamic Bank", tier: "premium", color: "from-emerald-400 to-cyan-500" },
-    { name: "Bank Alfalah Limited", icon: FaUniversity, type: "Commercial Bank", tier: "standard", color: "from-blue-400 to-purple-500" },
-    { name: "MCB Bank Limited", icon: FaUniversity, type: "Commercial Bank", tier: "premium", color: "from-red-400 to-orange-500" },
-    { name: "JS Bank Limited", icon: FaUniversity, type: "Commercial Bank", tier: "standard", color: "from-indigo-400 to-blue-500" },
-    { name: "Bank Islami Pakistan Limited", icon: FaShieldAlt, type: "Islamic Bank", tier: "standard", color: "from-teal-400 to-green-500" },
-    { name: "Bank Makramah Limited", icon: FaShieldAlt, type: "Islamic Bank", tier: "standard", color: "from-pink-400 to-red-500" },
-    { name: "Bank of Punjab", icon: FaUniversity, type: "Provincial Bank", tier: "premium", color: "from-orange-400 to-red-500" }
+    { 
+      name: "State Bank of Pakistan", 
+      icon: FaUniversity, 
+      type: "Central Bank", 
+      tier: "premium", 
+      color: "from-yellow-400 to-orange-500",
+      website: "https://www.sbp.org.pk/"
+    },
+    { 
+      name: "National Bank of Pakistan", 
+      icon: FaUniversity, 
+      type: "Commercial Bank", 
+      tier: "premium", 
+      color: "from-green-400 to-blue-500",
+      website: "https://www.nbp.com.pk/"
+    },
+    { 
+      name: "Summit Bank Limited", 
+      icon: FaUniversity, 
+      type: "Commercial Bank", 
+      tier: "standard", 
+      color: "from-purple-400 to-pink-500",
+      website: "https://www.summitbank.com.pk/"
+    },
+    { 
+      name: "Meezan Bank Limited", 
+      icon: FaShieldAlt, 
+      type: "Islamic Bank", 
+      tier: "premium", 
+      color: "from-emerald-400 to-cyan-500",
+      website: "https://www.meezanbank.com/"
+    },
+    { 
+      name: "Bank Alfalah Limited", 
+      icon: FaUniversity, 
+      type: "Commercial Bank", 
+      tier: "standard", 
+      color: "from-blue-400 to-purple-500",
+      website: "https://www.bankalfalah.com/"
+    },
+    { 
+      name: "MCB Bank Limited", 
+      icon: FaUniversity, 
+      type: "Commercial Bank", 
+      tier: "premium", 
+      color: "from-red-400 to-orange-500",
+      website: "https://www.mcb.com.pk/"
+    },
+    { 
+      name: "JS Bank Limited", 
+      icon: FaUniversity, 
+      type: "Commercial Bank", 
+      tier: "standard", 
+      color: "from-indigo-400 to-blue-500",
+      website: "https://www.jsbl.com/"
+    },
+    { 
+      name: "Bank Islami Pakistan Limited", 
+      icon: FaShieldAlt, 
+      type: "Islamic Bank", 
+      tier: "standard", 
+      color: "from-teal-400 to-green-500",
+      website: "https://www.bankislami.com.pk/"
+    },
+    { 
+      name: "Bank Makramah Limited", 
+      icon: FaShieldAlt, 
+      type: "Islamic Bank", 
+      tier: "standard", 
+      color: "from-pink-400 to-red-500",
+      website: "https://www.bankmakramah.com/"
+    },
+    { 
+      name: "Bank of Punjab", 
+      icon: FaUniversity, 
+      type: "Provincial Bank", 
+      tier: "premium", 
+      color: "from-orange-400 to-red-500",
+      website: "https://www.bop.com.pk/"
+    }
   ];
 
   const corporateClients = [
-    { name: "Pakistan Mobile Communications Limited", icon: FaMobile, type: "Telecommunications", tier: "premium", color: "from-cyan-400 to-blue-500" },
-    { name: "Pak Telecom Mobile Limited", icon: FaMobile, type: "Telecommunications", tier: "premium", color: "from-green-400 to-teal-500" },
-    { name: "Metro Pakistan", icon: FaShoppingCart, type: "Retail", tier: "standard", color: "from-yellow-400 to-orange-500" },
-    { name: "Bata Pakistan", icon: FaShoppingCart, type: "Footwear", tier: "premium", color: "from-red-400 to-pink-500" },
-    { name: "Qarshi Industries (Private) Limited", icon: FaIndustry, type: "Pharmaceuticals", tier: "standard", color: "from-purple-400 to-indigo-500" },
-    { name: "TCS (Private) Limited", icon: FaTruck, type: "Logistics", tier: "premium", color: "from-emerald-400 to-green-500" },
-    { name: "M&P (Private) Limited", icon: FaBuilding, type: "Corporate", tier: "standard", color: "from-orange-400 to-red-500" }
+    { 
+      name: "Pakistan Mobile Communications Limited", 
+      icon: FaMobile, 
+      type: "Telecommunications", 
+      tier: "premium", 
+      color: "from-cyan-400 to-blue-500",
+      website: "https://www.jazz.com.pk/"
+    },
+    { 
+      name: "Pak Telecom Mobile Limited", 
+      icon: FaMobile, 
+      type: "Telecommunications", 
+      tier: "premium", 
+      color: "from-green-400 to-teal-500",
+      website: "https://www.telenor.com.pk/"
+    },
+    { 
+      name: "Metro Pakistan", 
+      icon: FaShoppingCart, 
+      type: "Retail", 
+      tier: "standard", 
+      color: "from-yellow-400 to-orange-500",
+      website: "https://www.metro.pk/"
+    },
+    { 
+      name: "Bata Pakistan", 
+      icon: FaShoppingCart, 
+      type: "Footwear", 
+      tier: "premium", 
+      color: "from-red-400 to-pink-500",
+      website: "https://www.bata.com.pk/"
+    },
+    { 
+      name: "Qarshi Industries (Private) Limited", 
+      icon: FaIndustry, 
+      type: "Pharmaceuticals", 
+      tier: "standard", 
+      color: "from-purple-400 to-indigo-500",
+      website: "https://qarshi.com/"
+    },
+    { 
+      name: "TCS (Private) Limited", 
+      icon: FaTruck, 
+      type: "Logistics", 
+      tier: "premium", 
+      color: "from-emerald-400 to-green-500",
+      website: "https://www.tcsexpress.com/"
+    },
+    { 
+      name: "M&P (Private) Limited", 
+      icon: FaBuilding, 
+      type: "Corporate", 
+      tier: "standard", 
+      color: "from-orange-400 to-red-500",
+      website: "https://www.mpservices.com.pk/"
+    }
   ];
 
   const currentClients = activeSection === 'banking' ? bankingClients : corporateClients;
@@ -56,6 +175,13 @@ const ClientShowcase = () => {
   const ClientCard = ({ client, index }) => {
     const IconComponent = client.icon;
     const isPremium = client.tier === 'premium';
+    
+    const handleWebsiteClick = (e) => {
+      e.preventDefault();
+      if (client.website) {
+        window.open(client.website, '_blank', 'noopener,noreferrer');
+      }
+    };
     
     return (
       <motion.div
@@ -102,9 +228,22 @@ const ClientShowcase = () => {
               <span className="text-gray-400 text-sm">
                 {isPremium ? 'Strategic Partner' : 'Trusted Client'}
               </span>
-              <div className="flex items-center space-x-1">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-green-400 text-xs font-medium">Active</span>
+              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1">
+                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <span className="text-green-400 text-xs font-medium">Active</span>
+                </div>
+                {client.website && (
+                  <motion.button
+                    onClick={handleWebsiteClick}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="p-1 rounded-full bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/30 hover:border-orange-500/50 transition-all duration-200"
+                    title="Visit Website"
+                  >
+                    <FaExternalLinkAlt className="text-orange-400 text-xs" />
+                  </motion.button>
+                )}
               </div>
             </div>
           </div>
@@ -140,14 +279,14 @@ const ClientShowcase = () => {
             </motion.div>
 
             <h1 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-6 tracking-tight">
-              OUR ELITE
+              LEGAL
             </h1>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              CLIENTELE
+              ADVISORY
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto mb-8"></div>
             <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed">
-              Trusted by Pakistan's most prestigious institutions for over two decades
+              Providing comprehensive legal counsel to Pakistan's most prestigious institutions for over two decades
             </p>
           </motion.div>
 
@@ -205,7 +344,7 @@ const ClientShowcase = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-transparent"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-center text-orange-400 mb-8">Partnership Excellence</h3>
+              <h3 className="text-3xl font-bold text-center text-orange-400 mb-8">Legal Excellence</h3>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {[
                   { value: "22+", label: "Years Experience", icon: FaCrown },

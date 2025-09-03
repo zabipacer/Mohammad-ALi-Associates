@@ -160,7 +160,7 @@ const HeroSection = () => {
                 <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-amber-600/20 rounded-full mb-2 md:mb-3">
                   <Shield className="h-5 w-5 md:h-6 md:w-6 text-amber-600" />
                 </div>
-                <p className="text-white font-semibold text-base md:text-lg">1000+</p>
+                <p className="text-white font-semibold text-base md:text-lg">22+</p>
                 <p className="text-gray-400 text-xs md:text-sm">Satisfied Clients</p>
               </div>
               <div className="flex flex-col items-center">
